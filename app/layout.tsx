@@ -1,9 +1,11 @@
 import "@/styles/globals.css";
 import { Metadata } from "next";
-import { siteConfig } from "@/config/site";
+import { COLOR1, COLOR2, COLOR6, siteConfig } from "@/config/site";
 import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
 import { Link } from "@nextui-org/link";
+import { COLOR3 } from '../config/site';
+import { ScrollShadow } from "@nextui-org/scroll-shadow";
 
 export const metadata: Metadata = {
 	title: {
@@ -26,15 +28,16 @@ export default function RootLayout({
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<head />
-			<body className="min-h-screen">
+			<body className="h-screen overflow-auto">
 				<Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-					<div className="relative flex flex-col justify-between h-screen">
-						<div className="flex grow">
+					<div className="h-screen flex flex-col overflow-auto">
+						<div className="flex flex-col lg:flex-row grow h-full overflow-hidden">
 							<Navbar />
-							<main className="mx-auto px-6 grow flex">
-								<div className="bg-pink-200 grow mt-10 mx-0 lg:mr-8 bg-slate-900 rounded-xl">
+							<main className="w-full mx-auto px-6 h-full	flex overflow-hidden">
+
+								<ScrollShadow hideScrollBar className="grow mt-5 lg:mt-10 mx-0 lg:mr-8 rounded-xl overflow-auto" style={{backgroundColor: COLOR1, color: COLOR6}}>	
 									{children}
-								</div>
+								</ScrollShadow>
 							</main>
 						</div>
 						<footer className="w-full flex items-center justify-center py-3">
