@@ -31,7 +31,7 @@ export const Navbar = () => {
       <div className="hidden lg:flex flex-col w-[300px] py-5 ml-10 mt-10 rounded-xl overflow-hidden" style={{ backgroundColor: COLOR1 }}>
         <div className="mx-auto">
           <NextLink className="flex justify-start items-center gap-1 text-white" href="/">
-            <p className="font-extrabold text-inherit text-2xl" style={{ color: COLOR6 }}>Nelsota IA</p>
+            <p className="font-extrabold text-inherit text-2xl" style={{ color: COLOR6 }}>Nelsota AI</p>
           </NextLink>
         </div>
         <ScrollShadow hideScrollBar className="grow flex flex-col">
@@ -83,7 +83,7 @@ export const Navbar = () => {
         <NavbarContent justify="end">
           <NavbarItem>
             <NextLink className="flex justify-start items-center gap-1 text-white" href="/">
-              <p className="font-extrabold text-inherit text-2xl" style={{ color: COLOR6 }}>Nelsota IA</p>
+              <p className="font-extrabold text-inherit text-2xl" style={{ color: COLOR6 }}>Nelsota AI</p>
             </NextLink>
           </NavbarItem>
         </NavbarContent>
